@@ -1,7 +1,7 @@
 {
-  "name": "npm-module-boilerplate-es6",
+  "name": "react-pell",
   "version": "1.0.0",
-  "description": "Boilerplate for npm modules.",
+  "description": "React wrapper for Pell editor",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -16,21 +16,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Travelport-Ukraine/npm-module-boilerplate.git"
+    "url": "git+https://github.com/lassegit/react-pell.git"
   },
   "keywords": [
-    "boilerplate",
-    "npm",
-    "module",
-    "node",
-    "javascript"
+    "WYSIWYG",
+    "editor",
+    "react",
+    "text",
   ],
-  "author": "Mark mail.ormark@gmail.com",
+  "author": "Lasse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Travelport-Ukraine/npm-module-boilerplate/issues"
+    "url": "https://github.com/lassegit/react-pell/issues"
   },
-  "homepage": "https://github.com/Travelport-Ukraine/npm-module-boilerplate#readme",
+  "homepage": "https://github.com/lassegit/react-pell",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
