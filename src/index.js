@@ -11,15 +11,13 @@ export default class ReactPell extends Component {
   componentDidMount() {
     this.editor = pell.init({
       element: ReactDOM.findDOMNode(this),
-      onChange: (html) => { this.props.onChange ? this.props.onChange(html) : null; },
+      onChange: html => this.props.onChange(html),
       styleWithCSS: this.props.styleWithCSS,
       actions: this.props.actions,
       classes: this.props.classes,
     });
 
-    if (this.props.content) {
-      this.editor.content.innerHTML = this.props.content;
-    }
+    this.editor.content.innerHTML = this.props.content;
   }
 
   componentWillUnmount() {
@@ -28,20 +26,39 @@ export default class ReactPell extends Component {
   }
 
   render() {
-    const { width, height, style } = this.props;
-    const divStyle = { width, height, ...style };
-
-    return (<div style={divStyle}></div>);
+    const { style } = this.props;
+    return <div style={style} />;
   }
 }
 
 ReactPell.propTypes = {
   content: PropTypes.string,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   styleWithCSS: PropTypes.bool,
   actions: PropTypes.array,
   classes: PropTypes.object,
   style: PropTypes.object,
-  width: PropTypes.string,
-  height: PropTypes.string,
 };
+
+ReactPell.defaultProps = {
+  content: '',
+  styleWithCSS: false,
+  actions: [
+    'bold',
+    'italic',
+    'underline',
+    'strikethrough',
+    'heading1',
+    'heading2',
+    'olist',
+    'ulist',
+    'quote',
+    'code',
+    'line',
+  ],
+  classes: {
+    actionbar: 'pell-actionbar',
+    button: 'pell-button',
+    content: 'pell-content',
+  }
+}

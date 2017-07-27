@@ -7,6 +7,7 @@ const style = {
   background: '#f2f2f2',
   borderRadius: '5px',
   boxShadow: '0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)',
+  height: '300px',
 };
 
 const classes = {
@@ -26,8 +27,6 @@ ReactDom.render(
       content="<b><u><i>Initial content!</i></u></b>"
       onChange={change}
       // classes={classes}
-      height="400px"
-      width="600px"
       style={style}
     />
   </div>,
