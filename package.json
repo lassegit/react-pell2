@@ -1,6 +1,6 @@
 {
   "name": "react-pell2",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "React wrapper for Pell editor",
   "main": "./src/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lassegit/react-pell.git"
+    "url": "git+https://github.com/lassegit/react-pell2.git"
   },
   "keywords": [
     "WYSIWYG",
@@ -22,9 +22,9 @@
   "author": "Lasse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lassegit/react-pell/issues"
+    "url": "https://github.com/lassegit/react-pell2/issues"
   },
-  "homepage": "https://github.com/lassegit/react-pell",
+  "homepage": "https://github.com/lassegit/react-pell2",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
