@@ -31,7 +31,7 @@ export default class ReactPell extends Component {
     const { width, height, style } = this.props;
     const divStyle = { width, height, ...style };
 
-    return <div style={divStyle} />;
+    return (<div style={divStyle}></div>);
   }
 }
 

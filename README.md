@@ -2,6 +2,7 @@
 
 
 ## Installation
+```npm i react-pell2```
 
 ## Usage
 
