@@ -1,9 +1,10 @@
 {
   "name": "react-pell2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React wrapper for Pell editor",
   "main": "./lib/index.js",
   "scripts": {
+    "clean": "rimraf lib",
     "dev": "webpack --config ./examples/webpack.config.js",
     "lint": "eslint src test",
     "build": "cross-env babel src --out-dir lib",
