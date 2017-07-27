@@ -16,6 +16,13 @@ const classes = {
   content: 'custom-content',
 };
 
+const actions = [{
+  name: 'custom',
+  icon: '<b><u><i>C</i></u></b>',
+  title: 'Custom Action',
+  result: () => console.log('YOLO')
+}];
+
 function change(html) {
   console.log('html from parent:', html)
 }
@@ -26,6 +33,7 @@ ReactDom.render(
     <ReactPell
       content="<b><u><i>Initial content!</i></u></b>"
       onChange={change}
+      // actions={actions}
       // classes={classes}
       style={style}
     />

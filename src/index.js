@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import pell from 'pell';
 import PropTypes from 'prop-types';
+import './style.css';
+
+if (
+  typeof window !== 'undefined' &&
+  window.document &&
+  window.document.createElement) {
+  window.pell = pell; // Expose Pell globally
+}
 
 export default class ReactPell extends Component {
   constructor(props) {
