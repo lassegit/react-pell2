@@ -7,7 +7,8 @@
 ## Usage
 
 ```javascript
-  import ReactPell from 'react-pell';
+  import ReactPell from 'react-pell2';
+  
   <ReactPell
     content="<b><u><i>Initial content!</i></u></b>"
     onChange={}
