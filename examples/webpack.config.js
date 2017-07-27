@@ -1,14 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: {
-    // bundle: path.resolve(__dirname, '../src/index.js'),
-    index: path.resolve(__dirname, './index.js'),
-  },
+  entry: path.resolve(__dirname, './index.js'),
   output: {
-        path: __dirname,
-        filename: 'bundle.js'
+    path: __dirname,
+    filename: 'bundle.js'
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
@@ -20,9 +18,18 @@ module.exports = {
         {
           presets:['es2015', 'react']
         }
+      },
+      {
+        test: /\.css/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       }
     ]
   },
   watch: true,
-  plugins: []
+  plugins: [
+    new ExtractTextPlugin('style.css')
+  ]
 };

@@ -8,7 +8,8 @@
     "dev": "webpack --config ./examples/webpack.config.js",
     "lint": "eslint src test",
     "build": "cross-env babel src --out-dir lib",
-    "prepublish": "npm run clean && npm run build"
+    "copy": "cp src/style.css lib/",
+    "prepublish": "npm run clean && npm run build && npm run copy"
   },
   "files": [
     "lib",
@@ -40,12 +41,15 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.13.0",
     "cross-env": "^3.0.0",
+    "css-loader": "^0.28.4",
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "rimraf": "^2.5.4",
+    "style-loader": "^0.18.2",
     "webpack": "^3.4.1"
   },
   "dependencies": {
