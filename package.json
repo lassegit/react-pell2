@@ -1,13 +1,16 @@
 {
   "name": "react-pell2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React wrapper for Pell editor",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "dev": "webpack --config ./examples/webpack.config.js",
-    "lint": "eslint src test"
+    "lint": "eslint src test",
+    "build": "cross-env babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "files": [
+    "lib",
     "src"
   ],
   "repository": {
@@ -35,6 +38,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.13.0",
+    "cross-env": "^3.0.0",
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.0.0",
