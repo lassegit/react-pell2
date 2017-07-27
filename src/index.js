@@ -68,5 +68,5 @@ ReactPell.defaultProps = {
     actionbar: 'pell-actionbar',
     button: 'pell-button',
     content: 'pell-content',
-  }
-}
+  },
+};
