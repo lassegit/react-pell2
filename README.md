@@ -19,9 +19,12 @@ Minimal wrapper for Pell editor without any extras build in.
     width="600px"
     style={style}
   />
+
+  Check out the /examples folder for a more comprehensive example.
 ```
 
 ## Other
 
+Pell WYSIWYG editor: https://github.com/jaredreich/pell/
 If you need markdown support check out: https://github.com/bpetetot/react-pell
-
+Boilerplate for this module: https://github.com/Travelport-Ukraine/npm-module-boilerplate
