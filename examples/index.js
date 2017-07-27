@@ -5,6 +5,8 @@ import ReactPell from '../src/index';
 const style = {
   color: '#000',
   background: '#f2f2f2',
+  borderRadius: '5px',
+  boxShadow: '0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)',
 };
 
 const classes = {
