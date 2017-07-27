@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import pell from 'pell';
 import PropTypes from 'prop-types';
 import './style.css';
@@ -18,7 +17,7 @@ export default class ReactPell extends Component {
 
   componentDidMount() {
     this.editor = pell.init({
-      element: ReactDOM.findDOMNode(this),
+      element: this.editor,
       onChange: html => this.props.onChange(html),
       styleWithCSS: this.props.styleWithCSS,
       actions: this.props.actions,
@@ -33,9 +32,17 @@ export default class ReactPell extends Component {
     this.editor = null;
   }
 
+  getHTML() {
+    return this.editor.content.innerHTML;
+  }
+
+  getText() {
+    return this.editor.content.innerText;
+  }
+
   render() {
     const { style } = this.props;
-    return <div style={style} />;
+    return <div ref={e => (this.editor = e)} style={style} />;
   }
 }
 

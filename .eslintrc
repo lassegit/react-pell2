@@ -27,6 +27,8 @@
     ],
     "import/no-unresolved": "off",
     "react/jsx-filename-extension": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "no-useless-constructor": "off",
+    "react/forbid-prop-types": "off"
   }
 }
