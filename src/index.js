@@ -6,7 +6,8 @@ import './style.css';
 if (
   typeof window !== 'undefined' &&
   window.document &&
-  window.document.createElement) {
+  window.document.createElement
+) {
   window.pell = pell; // Expose Pell globally
 }
 
@@ -21,7 +22,7 @@ export default class ReactPell extends Component {
       onChange: html => this.props.onChange(html),
       styleWithCSS: this.props.styleWithCSS,
       actions: this.props.actions,
-      classes: this.props.classes,
+      classes: this.props.classes
     });
 
     this.editor.content.innerHTML = this.props.content;
@@ -52,7 +53,7 @@ ReactPell.propTypes = {
   styleWithCSS: PropTypes.bool,
   actions: PropTypes.array,
   classes: PropTypes.object,
-  style: PropTypes.object,
+  style: PropTypes.object
 };
 
 ReactPell.defaultProps = {
@@ -69,11 +70,11 @@ ReactPell.defaultProps = {
     'ulist',
     'quote',
     'code',
-    'line',
+    'line'
   ],
   classes: {
     actionbar: 'pell-actionbar',
     button: 'pell-button',
-    content: 'pell-content',
-  },
+    content: 'pell-content'
+  }
 };
